@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>total20fisrtoffibonacci</title>
+</head>
+<body>
+
+</body>
+<script>
+    input = prompt("điền vào số tự nhiên")
+    let count = 0
+    let total = 0
+    for (let i = 0; i < input; i++) {
+        if (i % 7 === 0) {
+            total += i
+            count++
+        }
+        if (count === 30) {
+            alert(`tổng 30 số tu nhiên đầu tiên chia hết cho 7=${total}`)
+            break;
+        }
+    }
+
+</script>
+</html>

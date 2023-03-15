@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="play()"> Bắt đầu</button>
+
+</body>
+<script>
+    function play() {
+        let number = +prompt("nhập vào giới hạn số")
+        let numberrun = Math.floor(Math.random() * number);
+        let numbercheck = +prompt("nhập vào số bạn đoán")
+        let count = 0;
+        while (numbercheck !== numberrun) {
+            count++;
+
+            if (numbercheck < numberrun || numbercheck > numberrun) {
+                alert("số bạn đoán chưa đúng")
+            } else if (numberrun === numbercheck) {
+                alert("số bạn đoán đã đúng , chúc mừng")
+                break;
+            }
+            numbercheck = +prompt("nhập vào số bạn đoán")
+            if (count === 4) {
+                alert("bạn hết số lần đoán")
+                break;
+            }
+
+        }
+    }
+</script>
+</html>
